@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="lbcalcApp">
+<head lang="en">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LBCALC</title>
+    <link rel="stylesheet" href="lib/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+<header class="panel-heading"><h1>Living Benefit Calculator</h1></header>
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+        <ul class="nav navbar-nav">
+            <li ng-class="{active : activeTab == 'home'}">
+                <a href="#home">Home</a>
+            </li>
+            <li ng-class="{active : activeTab == 'calculator'}">
+                <a href="#calculator">Calculator</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div ng-view class="container"></div>
+
+<script src="lib/js/jquery.min.js"></script>
+<script src="lib/js/bootstrap.min.js"></script>
+<script src="lib/js/angular.min.js"></script>
+<script src="lib/js/angular-route.min.js"></script>
+<script src="app.js"></script>
+<script src="home/home-controller.js"></script>
+<script src="calculator/calculator-controller.js"></script>
+</body>
+</html>
