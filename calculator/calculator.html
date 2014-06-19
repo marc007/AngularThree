@@ -1,7 +1,18 @@
 <fieldset ng-controller="dobController">
     <legend>User Information</legend>
 
-    Date of birth:<input type="date" ng-model="userDateOfBirth" ng-change="calculateAge()">
-    Age:<input type="number" ng-model="userAge" min="0" max="200" ng-change="resetDateOfBirth()">
-    Deferral:<input type="number" ng-model="userDeferral" min="0" max="100">
+    Date of birth:<input
+        type="date"
+        ng-model="userDateOfBirth"
+        ng-change="calculateAge()">
+    Age:<input
+        type="number"
+        ng-model="userAge"
+        min="0" max="200"
+        ng-change="resetDateOfBirth()">
+    Deferral:<input
+        type="number"
+        ng-model="userDeferral"
+        min="0" max="100">
+    Real Age: {{calculateRealAge()}}
 </fieldset>
